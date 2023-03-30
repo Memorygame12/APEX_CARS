@@ -1,0 +1,20 @@
+create or replace PACKAGE klant_pkg AS
+  PROCEDURE voeg_klant_toe (
+    v_voornaam IN Klanten.voornaam%TYPE,
+    v_achternaam IN Klanten.achternaam%TYPE,
+    v_adres IN Klanten.adres%TYPE,
+    v_telefoonnummer IN Klanten.telefoonnummer%TYPE,
+    v_email IN Klanten.email%TYPE
+  );
+
+  PROCEDURE update_klant (
+    v_klant_id IN Klanten.klant_id%TYPE,
+    v_voornaam IN Klanten.voornaam%TYPE,
+    v_achternaam IN Klanten.achternaam%TYPE,
+    v_adres IN Klanten.adres%TYPE,
+    v_telefoonnummer IN Klanten.telefoonnummer%TYPE,
+    v_email IN Klanten.email%TYPE
+  );
+
+  PROCEDURE verwijder_klant (v_klant_id IN Klanten.klant_id%TYPE);
+END klant_pkg;

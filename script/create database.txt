@@ -1,0 +1,2 @@
+create user Interstellarcars_db identified by Interstellarcars_db;
+grant dba to Interstellarcars_db ;
